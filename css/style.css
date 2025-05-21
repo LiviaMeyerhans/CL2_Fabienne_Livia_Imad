@@ -1,0 +1,314 @@
+/* Basisstil */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  width: 100%;
+}
+
+/* Allgemeine Text- und Struktur-Elemente */
+p, h1, h2, h3, ol {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 800px;
+  margin: 3% auto 0;
+}
+
+h1 {
+  font-size: 3em;
+  color: rgb(16, 31, 37);
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+h4 {
+  font-size: large;
+}
+
+ol {
+  font-size: larger;
+  padding-left: 10%;
+}
+
+p {
+  font-size: larger;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin: 10px 50px 10px 0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+/* Header */
+header {
+  padding: 25px 30px;
+  background-color: #734C36;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.headerimage {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Hauptbereich */
+main {
+  padding: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #734C36;
+  color: white;
+  font-size: smaller;
+  padding: 15px 20px 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.footer-text {
+  margin-block: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+.footer-place,
+.footer-center,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  padding: 0 60px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 90vw;
+  aspect-ratio: 4 / 3;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.img-slides {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  background-color: white; 
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(115, 76, 54, 0.7);
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.prev:hover, .next:hover {
+  background-color: #734C36;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    max-width: 95vw;
+    aspect-ratio: 4 / 3;
+    max-height: 300px;
+  }
+
+  .prev, .next {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+}
+
+/* Wellenanimation */
+.wellen-container {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  background: none;
+  margin-top: 80px;
+}
+
+.welle {
+  width: 200%;
+  height: 100%;
+  animation: waveSlide 10s linear infinite;
+}
+
+@keyframes waveSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Footer & Navigation */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-place,
+  .footer-center {
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*Dino Game*/
+#score {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+#game {
+  width: 95vw;
+  height: 50vh;
+  max-width: 600px;
+  max-height: 300px;
+  border: 2px solid #734C36;
+  margin: 40px auto;
+  background-image: url("../img/backgrund-game.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#person {
+  width: 15vw;
+  height: 15vh;
+  max-width: 100px;
+  max-height: 150px;
+  position: absolute;
+  left: 8vw;
+  bottom: 0;
+  background-image: url("../img/person.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#book {
+  width: 10vw;
+  height: 10vh;
+  max-width: 60px;
+  max-height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  background-image: url("../img/Hinderniss.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: book 1.33s linear infinite;
+}
+
+@keyframes book {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -10vw;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 35%;
+  }
+  75% {
+    bottom: 35%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.jump-animation {
+  animation: jump 0.5s;
+}
