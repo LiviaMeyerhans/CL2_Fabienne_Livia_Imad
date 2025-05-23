@@ -157,12 +157,28 @@ footer {
   transform: translateY(-50%);
   background-color: rgba(115, 76, 54, 0.7);
   border: none;
-  padding: 10px 16px;
+  width: 40px;
+  height: 40px;
   color: white;
   font-size: 24px;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: #734C36;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 .prev:hover, .next:hover {
@@ -185,7 +201,8 @@ footer {
   }
 
   .prev, .next {
-    padding: 6px 10px;
+    width: 32px;
+    height: 32px;
     font-size: 18px;
   }
 }
@@ -311,4 +328,28 @@ footer {
 
 .jump-animation {
   animation: jump 0.5s;
+}
+
+/*Formular*/
+label, input, button {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 800px;
+    width: 70%;
+    align-items: center;
+    font-size: medium;
+}
+
+button {
+    font-size: larger;
+}
+
+input {background-color: #AF9D93;
+    color: white;
+}
+
+.formular {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
