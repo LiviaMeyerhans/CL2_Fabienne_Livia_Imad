@@ -53,7 +53,7 @@ submitButton.addEventListener("click", async () => {
   const result = await databaseClient.insertInto("orders", formData);
 
   if (result && !result.error) {
-    alert(`Danke für Ihre Bestellung, ${formData.firstName} ${formData.lastName}!\nEine Bestätigung wurde an ${formData.email} gesendet.`);
+    alert(`Danke für Ihre Bestellung, ${formData.firstName} ${formData.lastName}!\nDeine Bestellung wird an ${formData.address} gesendet.`);
   } else {
     alert("Es gab ein Problem beim Speichern der Bestellung. Bitte versuche es erneut.");
     console.error(result);
