@@ -22,13 +22,13 @@ function validateForm() {
     errorMessage.textContent = "Vorname ist ein Pflichtfeld";
   } else if (ln.length < 2) {
     submitButton.disabled = true;
-    errorMessage.textContent = "Nachname ist ein Pfichtfeld";
+    errorMessage.textContent = "Nachname ist ein Pflichtfeld";
   } else if (!emailPattern.test(mail)) {
     submitButton.disabled = true;
     errorMessage.textContent = "Bitte gib eine gültige E-Mail-Adresse ein.";
   } else if (addr.length < 2) {
     submitButton.disabled = true;
-    errorMessage.textContent = "Adresse ist Pflichtfeld";
+    errorMessage.textContent = "Adresse ist ein Pflichtfeld";
   } else {
     submitButton.disabled = false;
     errorMessage.textContent = "";
