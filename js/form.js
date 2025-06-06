@@ -55,7 +55,7 @@ submitButton.addEventListener("click", async () => {
   if (result && !result.error) {
     alert(`Danke für Ihre Bestellung, ${formData.firstName} ${formData.lastName}!\nDeine Bestellung wird an ${formData.address} gesendet.`);
   } else {
-    alert("Es gab ein Problem beim Speichern der Bestellung. Bitte versuche es erneut.");
+    alert("Diese Person ist bereits erfasst. Bitte geben Sie eine andere E-Mail adresse an.");
     console.error(result);
   }
 });
